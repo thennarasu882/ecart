@@ -54,7 +54,7 @@ mail.addEventListener("input", validate);
 password.addEventListener("input", validate);
 const mail_regx = /^[\w._%+-]+@[\w.-]+\.[a-zA-z]{2,4}/;
 const mob_regx = /^[0-9]{10}/;
-const pass_regx = /^[w]+{8,12}/
+const pass_regx = /^[\w._%+-@*#]{8,12}/
 
 function validate(e) {
     let target = e.target;
@@ -68,14 +68,11 @@ function validate(e) {
     }
 
     if (target.name == "password") {
-        if (mail_regx.test(target.value) | mob_regx.test(target.value)) {
+        if (pass_regx.test(target.value)){
              warn_invalid_pass.style.display = "none";
         }
         else {
              warn_invalid_pass.style.display = "block";
-             setTimeout(() => {
-                warn_invalid_pass.style.display = "none";
-            }, 4000);
         }
     }
-};
+}
