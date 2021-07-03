@@ -1,11 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!>
     <link rel="stylesheet" href="ecart.css" />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="path_to_icon_image" type="image/gif" sizes="16x16" />
     <title>Flipkart-login</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   </head>
   <body>
     <div class="container">
@@ -13,9 +21,11 @@
         <div class="leftcolumn">
           <div class="card">
             <h1>Login</h1>
-            <p>Get access to your</p>
-            <p>Orders, Wishlist and</p>
-            <p class="imgspace">Recommendations</p>
+
+            <p class="imgspace">
+              Get access to your Orders, Wishlist and Recommendations
+            </p>
+
             <img
               src="flipkart1.png"
               alt="flipkart"
@@ -26,26 +36,54 @@
         </div>
         <div class="rightcolumn">
           <div class="card">
-            <form action="">
-              
-              <input type="email" name="email" id="" style="width: 90%" placeholder="Email/Mobile Number" />
+            <form action="" autocomplete="off">
+              <input
+                type="email"
+                name="email"
+                id="email"
+                style="width: 90%"
+                placeholder="Email/Mobile Number"
+              />
+              <p class="warn_invalid1">Invalid Email/Mobile Number</p>
+
               <div class="pass_section">
                 <input
                   type="password"
                   name="password"
-                  id=""
-                  placeholder="Password"
+                  placeholder="password"
+                  id="password"
                 />
+                <i class="bi bi-eye" id="togglePassword"></i>
                 <button class="forgot">forgot?</button>
               </div>
+              <p class="warn_invalid2">Invalid password</p>
+              <input
+                type="number"
+                id="enter_otp"
+                placeholder="ENTER OTP"
+                style="display: none"
+              />
               <p class="info">
                 By continuing, you agree to Flipkart's
-                <span class="marked">Terms of Use </span>and
-                <span class="marked">Privacy Policy</span>.
+                <span id="terms"
+                  ><span id="terms_content" style="margin-left: 40px"
+                    >Hey this is the terms and conditions of flipkart</span
+                  >Terms and condition
+                </span>
+                and
+                <span id="terms">
+                  Privacy Policy
+                  <span id="terms_content" style="margin-left: -40px"
+                    >Hey this is the privacy policy of flipkart</span
+                  >
+                </span>
               </p>
               <button class="loginbtn">Login</button>
-              <p style="text-align: center">OR</p>
-              <button class="requestbtn">Request OTP</button>
+              <p style="text-align: center" id="or">OR</p>
+              <button class="requestbtn" id="req_otp">Request OTP</button>
+              <button class="usepassword" id="use_pass" style="display: none">
+                Use password
+              </button>
             </form>
             <p style="text-align: center">
               <button class="new-signup">
@@ -56,5 +94,6 @@
         </div>
       </div>
     </div>
+    <script src="ecart.js"></script>
   </body>
 </html>
