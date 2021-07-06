@@ -83,7 +83,6 @@ i {
 }
 .warn_invalid1,
 .warn_invalid2 {
-  display: none;
   margin-top: -10px;
   margin-left: 10px;
   position: absolute;

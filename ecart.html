@@ -38,11 +38,12 @@
           <div class="card">
             <form action="" autocomplete="off">
               <input
-                type="email"
+                type="text"
                 name="email"
                 id="email"
                 style="width: 90%"
                 placeholder="Email/Mobile Number"
+                maxlength="35"
               />
               <p class="warn_invalid1">Invalid Email/Mobile Number</p>
 
@@ -52,17 +53,13 @@
                   name="password"
                   placeholder="password"
                   id="password"
+                  maxlength="12"
                 />
                 <i class="bi bi-eye" id="togglePassword"></i>
                 <button class="forgot">forgot?</button>
               </div>
               <p class="warn_invalid2">Invalid password</p>
-              <input
-                type="number"
-                id="enter_otp"
-                placeholder="ENTER OTP"
-                style="display: none"
-              />
+              <input type="number" id="enter_otp" placeholder="ENTER OTP" />
               <p class="info">
                 By continuing, you agree to Flipkart's
                 <span id="terms"
@@ -81,9 +78,7 @@
               <button class="loginbtn">Login</button>
               <p style="text-align: center" id="or">OR</p>
               <button class="requestbtn" id="req_otp">Request OTP</button>
-              <button class="usepassword" id="use_pass" style="display: none">
-                Use password
-              </button>
+              <button class="usepassword" id="use_pass">Use password</button>
             </form>
             <p style="text-align: center">
               <button class="new-signup">
